@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Security.Policy;
 
 namespace OOP_Exercises
 {
@@ -431,6 +433,62 @@ global::System.Console.WriteLine("Preprocessor is not defined!");
             foreach (var arg in args)
             {
                 Console.WriteLine("Argument: " + arg);    
+            }
+            Console.ReadLine();
+        }
+    }*/
+
+    //This is C# Properties Exercise.
+    /*class Program{
+
+        private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        static void Main()
+        {
+            Program program = new Program();
+            program.Name = "Hello";
+            Console.WriteLine(program.Name);
+        }
+    }*/
+
+    //This is File Read Write Exercise.
+    /*class Program
+    {
+        static void Main()
+        {
+            string writeText = "Hello World!";
+            File.WriteAllText(@"C:\Users\hasni\Desktop\C# OOP concepts with examples\text.txt", writeText);
+
+            string readText = File.ReadAllText(@"C:\Users\hasni\Desktop\C# OOP concepts with examples\text.txt");
+            Console.WriteLine(readText);
+            Console.ReadLine();
+        }
+        
+    }*/
+
+    //This is Exception Exercise. try, catch, finally
+    /*class Program
+    {
+        static void Main()
+        {
+            try
+            {
+                int[] arr = { 1, 2, 6 };
+                Console.WriteLine(arr[3]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally 
+            {
+                Console.WriteLine("Finally block is running now!");
+
             }
             Console.ReadLine();
         }

@@ -1,0 +1,8 @@
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\bin\Debug\OOP_Exercises.exe.config
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\bin\Debug\OOP_Exercises.exe
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\bin\Debug\OOP_Exercises.pdb
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\obj\Debug\OOP_Exercises.csproj.AssemblyReference.cache
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\obj\Debug\OOP_Exercises.csproj.SuggestedBindingRedirects.cache
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\obj\Debug\OOP_Exercises.csproj.CoreCompileInputs.cache
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\obj\Debug\OOP_Exercises.exe
+C:\Users\hasni\source\repos\OOP_Exercises\OOP_Exercises\obj\Debug\OOP_Exercises.pdb

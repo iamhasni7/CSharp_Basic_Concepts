@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.IO;
 using System.Security.Policy;
@@ -635,6 +635,30 @@ global::System.Console.WriteLine("Preprocessor is not defined!");
 
             Account sa = new Account();
             sa.PrintDetails(new SavingAcount());
+
+            Console.ReadLine();
+        }
+    }*/
+
+    //This is Regular Expressions Exercise.
+    /*class Program
+    {
+        private static void showMatch(string text, string exp)
+        {
+            Console.WriteLine("Expression is " + exp);
+            MatchCollection mc = Regex.Matches(text, exp);
+
+            foreach (Match i in mc)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        static void Main()
+        {
+            string str = "A Thousand Splendid Suns";
+
+            Console.WriteLine("Matching words that start with 'S': ");
+            showMatch(str, @"\bS\S*");
 
             Console.ReadLine();
         }

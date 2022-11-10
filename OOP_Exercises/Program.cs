@@ -304,24 +304,24 @@ namespace OOP_Exercises
     }*/
 
     //This is String Exercise.
-   /* class StringProg
-    {
-        static void Main(string[] args)
-        {
-            string str = "This is test";
+    /* class StringProg
+     {
+         static void Main(string[] args)
+         {
+             string str = "This is test";
 
-            if (str.Contains("hello"))
-            {
-                Console.WriteLine("The sequence 'test' was found.");
-            }
-            else
-            {
-                Console.WriteLine("OUT");
-            }
+             if (str.Contains("hello"))
+             {
+                 Console.WriteLine("The sequence 'test' was found.");
+             }
+             else
+             {
+                 Console.WriteLine("OUT");
+             }
 
-            Console.ReadKey();
-        }
-    }*/
+             Console.ReadKey();
+         }
+     }*/
 
     //This is Operator-Overloading Exercise.
     /*class qwerty
@@ -490,6 +490,152 @@ global::System.Console.WriteLine("Preprocessor is not defined!");
                 Console.WriteLine("Finally block is running now!");
 
             }
+            Console.ReadLine();
+        }
+    }*/
+
+    //This is Dependency Injection Exercise.
+    //DI using Constructor injection
+    /* interface IAccount
+     {
+         void AccountDetails();
+     }
+
+     class CurrentAccount : IAccount
+     {
+         public void AccountDetails()
+         {
+             Console.WriteLine("Details of Currnet Accounts");
+         }
+     }
+
+     class SavingAccount : IAccount
+     {
+         public void AccountDetails()
+         {
+             Console.WriteLine("Details of Saving Accounts");
+         }
+     }
+
+     class Account
+     {
+         private IAccount account;
+
+         public Account(IAccount acc)
+         {
+             this.account = acc;
+         }
+
+         public void PrintAccount()
+         {
+             account.AccountDetails();
+         }
+     }
+
+     class Program
+     {        
+         static void Main()
+         {
+             IAccount ca = new CurrentAccount();
+             Account a = new Account(ca);
+             a.PrintAccount();
+
+             IAccount sa = new SavingAccount();
+             Account a2 = new Account(sa);
+             a2.PrintAccount();
+
+             Console.ReadLine();
+         }
+     }*/
+
+    //DI using Property injection.
+    /* interface IAccount
+     {
+         void AccountDetails();
+     }
+
+     class CurrentAcount : IAccount
+     {
+         public void AccountDetails()
+         {
+             Console.WriteLine("Details of Current Accounts.");
+         }
+     }
+
+     class SavingAcount : IAccount
+     {
+         public void AccountDetails()
+         {
+             Console.WriteLine("Details of Saving Accounts.");
+         }
+     }
+
+     class Account
+     {
+         public IAccount property { get; set; }
+
+         public void PrintAccounts()
+         {
+             property.AccountDetails();
+         }
+     }
+
+     class Program
+     {
+         static void Main()
+         {
+             Account ca = new Account();
+             ca.property = new CurrentAcount();
+             ca.PrintAccounts();
+
+             Account sa = new Account();
+             ca.property = new SavingAcount();
+             ca.PrintAccounts();
+
+             Console.ReadLine();
+         }
+     }*/
+
+    //DI using Method Injection.
+    /*interface IAccount
+    {
+        void AccountDetails();
+    }
+
+    class CurrentAcount : IAccount
+    {
+        public void AccountDetails()
+        {
+            Console.WriteLine("Details of Current Accounts.");
+        }
+    }
+
+    class SavingAcount : IAccount
+    {
+        public void AccountDetails()
+        {
+            Console.WriteLine("Details of Saving Accounts.");
+        }
+    }
+
+    class Account
+    {
+       public void PrintDetails(IAccount account)
+        {
+            account.AccountDetails();
+        }
+    }
+
+    class Program
+    {
+        static void Main()
+        {
+            Account ca = new Account();
+            ca.PrintDetails(new CurrentAcount());
+
+            Account sa = new Account();
+            sa.PrintDetails(new SavingAcount());
+
             Console.ReadLine();
         }
     }*/

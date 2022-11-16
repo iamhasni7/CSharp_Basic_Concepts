@@ -655,14 +655,52 @@ global::System.Console.WriteLine("Preprocessor is not defined!");
         }
         static void Main()
         {
-            string str = "A Thousand Splendid Suns";
+            string str = " A Thousand Splendid Suns";
 
             Console.WriteLine("Matching words that start with 'S': ");
-            showMatch(str, @"\bS\S*");
+            showMatch(str, @"\bS\S+");
 
             Console.ReadLine();
         }
     }*/
+
+    //This is Custom Data Annotation Exercise.
+    /*class Program
+    {
+        [AttributeUsage(AttributeTargets.Class)]
+        class CustomAttribute : Attribute
+        {
+
+        }
+
+        [Custom]
+        class Person
+        {
+            //[Custom] You cannot define Custom attribute here cuz its target is class only.
+            int id { get; set; }
+            string name { get; set; }
+        }
+    }*/
+
+    //This is LINQ Exercise.
+    /*class Program
+    {
+        static void Main()
+        {
+            int[] age = { 26, 87, 12, 35, 18, 20 };
+
+            var a = from i in age where i > 20 orderby i descending select i;
+
+            foreach(int item in a)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }*/
+
+    //This is LINQ to SQL Exercise.
+
 }
 
 //This is namespace Exercise.
